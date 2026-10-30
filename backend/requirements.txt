@@ -12,3 +12,4 @@ sqladmin
 jinja2
 itsdangerous
 python-dotenv
+email-validator
