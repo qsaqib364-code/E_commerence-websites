@@ -1,0 +1,31 @@
+# --- Core Framework ---
+fastapi
+uvicorn[standard]
+gunicorn
+python-multipart
+
+# --- Data Validation & Settings ---
+pydantic
+pydantic-settings
+email-validator
+
+# --- Database (Async PostgreSQL & Migrations) ---
+sqlalchemy[asyncio]
+asyncpg
+alembic
+greenlet
+
+# --- Background Tasks & Caching (Celery & Redis) ---
+celery[redis]
+redis
+flower
+
+# --- Security & Authentication (JWT & Passwords) ---
+passlib[bcrypt]
+python-jose[cryptography]
+
+# --- External API Calls (Payment & Courier) ---
+httpx
+
+# --- Utilities ---
+python-dotenv
