@@ -29,3 +29,6 @@ httpx
 
 # --- Utilities ---
 python-dotenv
+sqladmin
+jinja2
+itsdangerous
