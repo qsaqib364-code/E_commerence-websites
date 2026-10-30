@@ -17,4 +17,4 @@ async def upload_image(file: UploadFile = File(...)):
     with open(file_path, "wb") as buffer:
         shutil.copyfileobj(file.file, buffer)
 
-    return {"image_url": f"http://127.0.0.1:8000/uploads/{unique_filename}"}
+    return {"image_url": f"https://e-commerce-websites.onrender.com/uploads/{unique_filename}"}

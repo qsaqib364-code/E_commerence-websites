@@ -12,7 +12,7 @@ export default function CustomerRegister() {
     e.preventDefault();
     setError("");
     try {
-      const res = await fetch("http://127.0.0.1:8000/api/v1/auth/register", {
+      const res = await fetch("https://e-commerce-websites.onrender.com/api/v1/auth/register", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(form),

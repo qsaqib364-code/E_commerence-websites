@@ -19,7 +19,7 @@ export default function ProductsPage() {
   const { addToCart } = useCart(); 
 
   useEffect(() => {
-    fetch("http://127.0.0.1:8000/api/v1/products/")
+    fetch("https://e-commerce-websites.onrender.com/api/v1/products/")
       .then((res) => res.json())
       .then((data) => {
         setProducts(data);

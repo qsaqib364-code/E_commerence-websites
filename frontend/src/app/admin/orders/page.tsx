@@ -17,7 +17,7 @@ export default function AdminOrdersPage() {
 
   const fetchOrders = () => {
     const token = localStorage.getItem("admin_token");
-    fetch("http://127.0.0.1:8000/api/v1/orders/", {
+    fetch("https://e-commerce-websites.onrender.com/api/v1/orders/", {
       headers: { Authorization: `Bearer ${token}` },
     })
       .then((res) => res.json())
@@ -35,7 +35,7 @@ export default function AdminOrdersPage() {
   const handleStatusChange = async (orderId: number, newStatus: string) => {
     const token = localStorage.getItem("admin_token");
     try {
-      const res = await fetch(`http://127.0.0.1:8000/api/v1/orders/${orderId}/status`, {
+      const res = await fetch(`https://e-commerce-websites.onrender.com/api/v1/orders/${orderId}/status`, {
         method: "PATCH",
         headers: {
           "Content-Type": "application/json",

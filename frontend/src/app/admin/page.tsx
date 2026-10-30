@@ -15,12 +15,12 @@ export default function AdminDashboard() {
 
     const fetchStats = async () => {
       try {
-        const ordersRes = await fetch("http://127.0.0.1:8000/api/v1/orders/", {
+        const ordersRes = await fetch("https://e-commerce-websites.onrender.com/api/v1/orders/", {
           headers: { Authorization: `Bearer ${token}` },
         });
         const orders = await ordersRes.json();
 
-        const productsRes = await fetch("http://127.0.0.1:8000/api/v1/products/");
+        const productsRes = await fetch("https://e-commerce-websites.onrender.com/api/v1/products/");
         const products = await productsRes.json();
 
         const totalSales = orders.reduce((sum: number, order: any) => sum + Number(order.total_amount), 0);

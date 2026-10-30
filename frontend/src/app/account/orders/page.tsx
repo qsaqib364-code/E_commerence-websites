@@ -16,7 +16,7 @@ export default function MyOrders() {
     const token = localStorage.getItem("customer_token");
     if (!token) return router.push("/account/login");
 
-    fetch("http://127.0.0.1:8000/api/v1/orders/my-orders", {
+    fetch("https://e-commerce-websites.onrender.com/api/v1/orders/my-orders", {
       headers: { Authorization: `Bearer ${token}` }
     })
       .then(res => res.json())

@@ -18,7 +18,7 @@ export default function AdminLogin() {
 
     try {
       // Step 1: Login karke Token hasal karein
-      const res = await fetch("http://127.0.0.1:8000/api/v1/auth/login", {
+      const res = await fetch("https://e-commerce-websites.onrender.com/api/v1/auth/login", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ email, password }),
@@ -30,7 +30,7 @@ export default function AdminLogin() {
       const token = data.access_token;
 
       // Step 2: Token ke zariye check karein ke user Admin hai ya nahi
-      const userRes = await fetch("http://127.0.0.1:8000/api/v1/auth/me", {
+      const userRes = await fetch("https://e-commerce-websites.onrender.com/api/v1/auth/me", {
         headers: {
           Authorization: `Bearer ${token}`
         }

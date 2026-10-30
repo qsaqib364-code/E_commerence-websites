@@ -42,7 +42,7 @@ export default function CartPage() {
         headers["Authorization"] = `Bearer ${token}`; // Token header mein bhejein
       }
 
-      const res = await fetch("http://127.0.0.1:8000/api/v1/orders/", {
+      const res = await fetch("https://e-commerce-websites.onrender.com/api/v1/orders/", {
         method: "POST",
         headers: headers,
         body: JSON.stringify(orderData),

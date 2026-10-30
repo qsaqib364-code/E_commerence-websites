@@ -26,7 +26,7 @@ export default function AdminProductsPage() {
   const [uploading, setUploading] = useState(false);
 
   const fetchProducts = () => {
-    fetch("http://127.0.0.1:8000/api/v1/products/")
+    fetch("https://e-commerce-websites.onrender.com/api/v1/products/")
       .then((res) => res.json())
       .then((data) => {
         setProducts(data);
@@ -52,7 +52,7 @@ export default function AdminProductsPage() {
         const formData = new FormData();
         formData.append("file", imageFile);
 
-        const uploadRes = await fetch("http://127.0.0.1:8000/api/v1/upload/", {
+        const uploadRes = await fetch("https://e-commerce-websites.onrender.com/api/v1/upload/", {
           method: "POST",
           body: formData,
         });
@@ -62,7 +62,7 @@ export default function AdminProductsPage() {
         uploadedImageUrl = uploadData.image_url;
       }
 
-      const res = await fetch("http://127.0.0.1:8000/api/v1/products/", {
+      const res = await fetch("https://e-commerce-websites.onrender.com/api/v1/products/", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -93,7 +93,7 @@ export default function AdminProductsPage() {
     if (!confirm("Kya aap waqai yeh product delete karna chahte hain?")) return;
     const token = localStorage.getItem("admin_token");
     try {
-      const res = await fetch(`http://127.0.0.1:8000/api/v1/products/${id}`, {
+      const res = await fetch(`https://e-commerce-websites.onrender.com/api/v1/products/${id}`, {
         method: "DELETE",
         headers: { Authorization: `Bearer ${token}` },
       });
